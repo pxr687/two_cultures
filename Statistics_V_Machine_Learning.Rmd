@@ -13,7 +13,9 @@ jupyter:
     name: python3
 ---
 
-# Two Cultures of Data Science
+# The Two Cultures of Data Science
+
+By Peter Rush
 
 ### Terminological Groundwork 
 
@@ -37,7 +39,7 @@ Let's think of these as different underlying *philosophies of data analysis*.
 
 The statistician [Leo Breiman](https://www.stat.berkeley.edu/users/breiman/) identified these different terminologies and philosophies as falling broadly into two camps. 
 
-One camp derives primarily from traditional statistics (e.g. statistics as it is practised in university statistics departments, and has filtered out into other departments which apply statistical methods (e.g. biological and social science)). Here there is a focus on *explanation* - having a statistical model that captures some *true* aspects of the phenomena under study. Breiman called this the "Data Modelling Culture" - a data scientist applying this paradigm is trying to find a model which is a good approximation of the *data-generating process* which exists in nature, and which produced the data they are analysing. 
+One camp derives primarily from traditional statistics (e.g. statistics as it is practised in university statistics departments, and has filtered out into other departments which apply statistical methods e.g. biological and social science). Here there is a focus on *explanation* - having a statistical model that captures some *true* aspects of the phenomena under study. Breiman called this the "Data Modelling Culture" - a data scientist applying this paradigm is trying to find a model which is a good approximation of the *data-generating process* which exists in nature, and which produced the data they are analysing. 
 
 The second camp has arisen around *machine learning*, a much newer field than statistics. Here there is an emphasis on *predictive accuracy* e.g. making accurate predictions about new and unseen data. As Breiman puts it:
 
@@ -65,9 +67,7 @@ The prevalence of machine learning is increasing (especially in industrial appli
 - classical statistical methods give more interpretable parameters ("expected change in $\hat{y}$ for a 1-unit change in the predictor variable....")
 - machine learning methods are better for high dimensional datasets
 - machine learning methods will (generally) outperform classical statistical methods for predictive accuracy
-- machine learning methods (generally) give less interpretable models/parameter
-
-**Pause for questions so far**.
+- machine learning methods (generally) give less interpretable models/parameters
 
 
 ## Similarities between the Two Cultures
@@ -93,7 +93,7 @@ However, we might care about predicting whether a new person (not in the dataset
 
 In either case, there are similarities in the model-fitting procedure. Typically, as we've seen previously, we define a cost function, and adjust the parameters of our model until we find the smallest value of the cost function. (As mentioned previously, we want the cost function to be *cheap* i.e. have a small value).
 
-With respect to cost functions, machine learning methods and classical statistical methods are similar: they both seek to achieve find a "good" set of parameters which give a (relatively) small value for the cost function. In some circumstances, you might see classical statistical models like linear regression and logistic regression referred to *as* types of machine learning model. The difference is subtle: it is more to do with underlying philosophy, purpose and perspective:
+With respect to cost functions, machine learning methods and classical statistical methods are similar: they both seek to achieve find a "good" set of parameters which give a (relatively) small value for the cost function. In some circumstances, you might see classical statistical models like linear regression and logistic regression referred to *as* types of machine learning model. The difference is subtle - it is more to do with underlying philosophy, purpose and perspective:
 
 - do we care more about explaining, or about predicting?
 
@@ -121,13 +121,11 @@ concepts_exercise()
 
 ### Going forward
 
-- in later sessions we will look at some more advanced classical statistical methods: generalizations of the linear model, and how to use them responsibly
-    - these generalizations extend the linear model framework to a variety of different types of outcome variable
-    - together, these methods give a flexible toolkit for data analysis. Assuming that a generalized linear model fits a given dataset well, it will yield clear and interpretable parameter estimates.
+In later sessions we will look at some more advanced classical statistical methods: generalizations of the linear model, and how to use them responsibly. These generalizations extend the linear model framework to a variety of different types of outcome variable, and together these methods give a flexible toolkit for data analysis. Assuming that a generalized linear model fits a given dataset well, it will yield clear and interpretable parameter estimates.
     
 Machine learning is a rapidly developing and exciting field. However, there are many reasons that classical statistical methods still matter, and are important to understand:
 
-- if model fit/predictive performance between two models is *similar*, we would argue that a simpler, interpretable model should be preferred *if your aim is **explanation and inference**
+- if model fit/predictive performance between two models is *similar*, we would argue that a simpler, interpretable model should be preferred *if your aim is **explanation and inference***.
 
 - you will encounter generalized linear models in research literature, so it is important to understand how they work when synthesizing research findings, or talking about them with other data scientsits. For example, below is the abstract from a recent biomedical science paper entitled *"A comprehensive analysis of all-cause and cause-specific excess deaths in 30 countries during 2020."*):
 
